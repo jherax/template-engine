@@ -1,0 +1,35 @@
+{
+  "name": "template-engine",
+  "version": "0.1.0",
+  "description": "A template engine",
+  "author": "David Rivera <jherax@gmail.com>",
+  "module": "src/index.js",
+  "browser": "dist/t-engine.min.js",
+  "main": "dist/t-engine.js",
+  "keywords": [
+    "html",
+    "template",
+    "templating",
+    "engine",
+    "javascript"
+  ],
+  "repository": {
+    "url": "git+https://github.com/jherax/template-engine.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/jherax/template-engine/issues"
+  },
+  "homepage": "https://github.com/jherax/template-engine#readme",
+  "scripts": {
+    "eslint": "eslint src || true",
+    "eslint:test": "eslint test --config test/.eslintrc.json || true",
+    "build": "webpack --bail --config webpack/build.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "ava": {}
+}
