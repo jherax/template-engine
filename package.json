@@ -4,8 +4,8 @@
   "description": "A template engine",
   "author": "David Rivera <jherax@gmail.com>",
   "module": "src/index.js",
-  "main": "dist/t-engine.js",
-  "browser": "dist/t-engine.min.js",
+  "main": "dist/template-engine.js",
+  "browser": "dist/template-engine.min.js",
   "keywords": [
     "html",
     "template",
