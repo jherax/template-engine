@@ -4,13 +4,14 @@
   "description": "A template engine",
   "author": "David Rivera <jherax@gmail.com>",
   "module": "src/index.js",
-  "browser": "dist/t-engine.min.js",
   "main": "dist/t-engine.js",
+  "browser": "dist/t-engine.min.js",
   "keywords": [
     "html",
     "template",
     "templating",
     "engine",
+    "compile",
     "javascript"
   ],
   "repository": {
@@ -24,12 +25,28 @@
   "scripts": {
     "eslint": "eslint src || true",
     "eslint:test": "eslint test --config test/.eslintrc.json || true",
+    "test": "",
     "build": "webpack --bail --config webpack/build.js"
   },
   "license": "ISC",
   "dependencies": {
+    "core-js": "^2.5.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  },
   "optionalDependencies": {},
   "ava": {}
 }
