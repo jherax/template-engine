@@ -12,7 +12,6 @@ const config = {
   entry: {
     'template-engine': PATHS.source.js,
     'template-engine.min': PATHS.source.js,
-    'template-engine-full.min': [PATHS.source.polyfills, PATHS.source.js],
   },
   output: {
     path: PATHS.dist.folder,

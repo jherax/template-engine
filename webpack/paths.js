@@ -11,6 +11,5 @@ module.exports = {
   source: {
     folder: source,
     js: resolve(source, 'index.js'),
-    polyfills: resolve(source, 'polyfills.js'),
   },
 };
