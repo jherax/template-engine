@@ -25,7 +25,8 @@
   "scripts": {
     "eslint": "eslint src || true",
     "eslint:test": "eslint test --config test/.eslintrc.json || true",
-    "test": "",
+    "pretest": "npm run build && npm run eslint:test",
+    "test": "ava --verbose",
     "build": "webpack --bail --config webpack/build.js"
   },
   "license": "ISC",
@@ -33,6 +34,7 @@
     "core-js": "^2.5.5"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -42,11 +44,18 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^2.0.0",
+    "eslint-plugin-ava": "^4.5.1",
     "eslint-plugin-import": "^2.11.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15"
   },
   "optionalDependencies": {},
-  "ava": {}
+  "ava": {
+    "failFast": true,
+    "files": [
+      "test/**/*.js",
+      "!test/**/_*.js"
+    ]
+  }
 }

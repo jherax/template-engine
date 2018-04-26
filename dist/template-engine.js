@@ -97,13 +97,10 @@ var CLOSING = /((^|%>)[^\t]*)"/g;
 var EQUALS = /\t=(.*?)%>/g;
 
 var funcBody = function funcBody(template) {
-  return ['function print() { p.push().apply(p, arguments) }', 'var p = [];',
+  return ['function writeHtml() { p.push.apply(p, arguments) }', 'var p = [];',
   // introduce the data as local-variable
   'with(data) {', 'p.push("', template, '");', '}', 'return p.join("");'].join('');
 };
-
-// TODO: enable read from URL
-// const isURL = /.+/;
 
 /**
  * Gets a template from a HTML-string or form a URL.

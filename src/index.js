@@ -4,7 +4,7 @@ const CLOSING = /((^|%>)[^\t]*)"/g;
 const EQUALS = /\t=(.*?)%>/g;
 
 const funcBody = template => [
-  'function print() { p.push().apply(p, arguments) }',
+  'function writeHtml() { p.push.apply(p, arguments) }',
   'var p = [];',
   // introduce the data as local-variable
   'with(data) {',
@@ -12,9 +12,6 @@ const funcBody = template => [
   '}',
   'return p.join("");',
 ].join('');
-
-// TODO: enable read from URL
-// const isURL = /.+/;
 
 /**
  * Gets a template from a HTML-string or form a URL.
